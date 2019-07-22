@@ -30,6 +30,8 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
+  background-image: url(https://steamcdn-a.akamaihd.net/steam/apps/570/page_bg_generated_v6b.jpg?t=1557267263);
+  margin: 0;
 }
 ol, ul {
 	list-style: none;
@@ -51,6 +53,11 @@ table {
   width: 940px;
   margin: 0 auto;
   display: block;
+}
+
+.nav {
+  height: 35px;
+  margin-top: -20px;
 }
 
 .main-col {

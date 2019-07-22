@@ -1,6 +1,10 @@
 const express = require('express');
 const app = express();
+const BodyParser = require('body-parser');
 const request = require('request');
+
+app.use(BodyParser.json());
+app.use(BodyParser.urlencoded({ extended: true }));
 
 app.use(express.static('public'));
 /*port 3001*/ ///Jimmy's api's
@@ -157,25 +161,27 @@ app.get('/graphRecent', (req, res) => {
 })
 
 //////////Graham's api's port 3003
-app.get('/Updates', (req, res) => {
+app.get('/updates', (req, res) => {
 
-  request('http://localhost:3003/Updates', (err, res, body) => {
+  request('http://localhost:3003/updates', (err, response, body) => {
     if(err) {
-      res.status(404).send(err);
+      res.status(404);
+      console.log(err);
     }
 
-    res.status(200).send(body);
+    res.status(200);
+    res.send(body);
   })
 })
 
-app.get('/Games/:id', (req, res) => {
+app.get('/games_updates/:id', (req, res) => {
 
-  request(`http://localhost:3003/Games/${req.params.id}`, (err, res, body) => {
+  request(`http://localhost:3003/games_updates/${req.params.id}`, (err, response, body) => {
     if(err) {
       res.status(404).send(err);
     }
 
-    res.status(200).send(body);
+    res.status(200).send(JSON.parse(body));
   })
 })
 
