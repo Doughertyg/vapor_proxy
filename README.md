@@ -1,2 +1,2 @@
-# steam_proxy
-proxy server for steam FEC
+# vapor_proxy
+proxy server forvapor FEC
