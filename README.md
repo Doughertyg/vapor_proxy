@@ -1,2 +1,2 @@
 # vapor_proxy
-proxy server forvapor FEC
+proxy server for vapor
