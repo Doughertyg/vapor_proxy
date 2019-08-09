@@ -3,8 +3,8 @@ proxy server for vapor
 
 # to use
 clone down each service. <br>
-initialize each database ("mysql -u root < schema.sql" if mysql db, refer to service)
-build each service with webpack (if necessary)
+initialize each database ("mysql -u root < schema.sql" if mysql db, refer to service) <br>
+build each service with webpack (if necessary) <br>
 start each service with "npm start"
 
 # deployment
